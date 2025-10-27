@@ -1,0 +1,51 @@
+# ============================================================================
+# .gitignore - EVALUACIÓN 2: AGENTE EVERLAST
+# ============================================================================
+
+# --- Entorno Virtual ---
+venv/
+env/
+ENV/
+.venv/
+
+# --- Variables de Entorno (CRÍTICO - NO SUBIR) ---
+.env
+.env.local
+.env.*.local
+
+# --- Python Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# --- Vector Store (archivos binarios grandes) ---
+datos/vectorstore_faiss/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+*.ipynb
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Sistema Operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs ---
+*.log
+
+# --- Streamlit ---
+.streamlit/secrets.toml
+
+# --- Builds y Distribuciones ---
+build/
+dist/
+*.egg-info/

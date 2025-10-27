@@ -1,0 +1,69 @@
+EL PASO A PASO TAMBIEN SE ENCUENTRA EN EL README 
+
+ATENCION, ESTE PROYECTO FUNCIONA 3.11.9
+
+# 1. Clonar repositorio
+git clone https://github.com/Bemol69/Evaluacion-2-Soluciones-Con-Ia.git
+
+cd "Evaluación 2"  (verifique que este en la carpeta indicada)
+
+# 2. Crear entorno virtual
+python -m venv venv
+
+# 3. Activar entorno (Windows)
+.\venv\Scripts\activate
+
+# 4. Instalar dependencias
+pip install -r requirements.txt
+
+# 5. Configurar variables de entorno
+# Crear archivo .env con:
+GITHUB_TOKEN=tu_token_aqui
+OPENAI_BASE_URL=https://models.inference.ai.azure.com
+OPENAI_EMBEDDINGS_URL=https://models.github.ai/inference
+```
+
+si tiene problemas, nos puede pedir nuestro .env al correo bpinafrias@gmail.com o bry.pina@duocuc.cl
+
+
+
+
+
+### Configuración Inicial
+
+
+# Crear vector store (SOLO UNA VEZ)
+python codigo/create_vectorstore.py
+
+
+**Salida esperada**:
+```
+✅ 3 documentos cargados
+✅ 9 chunks creados
+✅ Embeddings generados: (9, 1536)
+✅ Índice FAISS creado (9 vectores)
+✅ Vector store guardado
+```
+
+### Ejecución
+
+#### Opción 1: Interfaz de Consola
+
+
+python codigo/agente_principal.py
+
+
+**Comandos disponibles**:
+- `salir` / `exit`: Terminar sesión
+- `limpiar` / `clear`: Borrar memoria
+- `historial`: Ver conversación completa
+
+#### Opción 2: Interfaz Web (Streamlit)
+
+```bash
+streamlit run codigo/app_streamlit.py
+```
+
+Abre navegador en `http://localhost:8501`
+
+---
